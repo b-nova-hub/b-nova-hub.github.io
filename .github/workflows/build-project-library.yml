@@ -1,0 +1,33 @@
+
+name: Build Project Library
+
+on:
+  push:
+    paths:
+      - 'projects/**'
+      - 'scripts/build_projects.py'
+      - '.github/workflows/build-project-library.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build projects.json
+        run: python scripts/build_projects.py
+
+      - name: Commit updated project library
+        run: |
+          if [[ -n "$(git status --porcelain projects.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add projects.json
+            git commit -m "Update project library"
+            git push
+          fi
