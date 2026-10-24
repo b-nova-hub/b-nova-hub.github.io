@@ -1,8 +1,2 @@
 
-B.NOVA Project Template
-
-1. Copy this project folder for each new project.
-2. Edit project.json with the project's name, category, description and links.
-3. Add a thumbnail image and set its filename in project.json.
-4. Put playable files or app links in the project folder.
-5. Keep project metadata inside projects/PROJECT-NAME/project.json for automatic listing.
+Copy this folder into /projects/your-project-slug/. Replace project.json values and add your own thumbnail.png. Categories: game, tool, app, software. Use a real image path and real open/download URLs; leave a URL blank if not available.
