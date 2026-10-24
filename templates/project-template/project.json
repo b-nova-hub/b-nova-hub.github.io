@@ -1,13 +1,13 @@
 
 {
-  "name": "My B.NOVA Project",
+  "name": "Your project name",
   "category": "app",
-  "description": "Add your project description here.",
+  "description": "Explain clearly what your project does and who it helps.",
   "image": "thumbnail.png",
   "features": [
     "Feature one",
     "Feature two"
   ],
-  "openUrl": "",
+  "openUrl": "https://example.com/your-project",
   "downloadUrl": ""
 }
