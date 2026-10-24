@@ -1,0 +1,13 @@
+
+{
+  "name": "My B.NOVA Project",
+  "category": "app",
+  "description": "Add your project description here.",
+  "image": "thumbnail.png",
+  "features": [
+    "Feature one",
+    "Feature two"
+  ],
+  "openUrl": "",
+  "downloadUrl": ""
+}
