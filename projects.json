@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "name": "My First App",
+    "category": "app",
+    "description": "My first B.NOVA application.",
+    "image": "projects/my-first-app/screenshot.png",
+    "features": [],
+    "openUrl": "",
+    "downloadUrl": ""
+  }
+]
