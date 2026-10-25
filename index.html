@@ -74,4 +74,7 @@ function drawProjects(category='all'){const list=allProjects.filter(p=>category=
 document.getElementById('projectFilters').addEventListener('click',e=>{const b=e.target.closest('button[data-category]');if(!b)return;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));drawProjects(b.dataset.category)});
 fetch('./projects.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('projects.json not found');return r.json()}).then(data=>{allProjects=Array.isArray(data)?data:[];drawProjects()}).catch(()=>{projectGrid.innerHTML='<div class="project-note project-empty"><strong>Project library is ready for your first release.</strong><br>Add a project folder using the included template. GitHub Actions will build the project list automatically whenever you commit a new project.</div>';});
 </script>
+ <p style="text-align:center; padding:15px;">
+  <a href="privacy-policy.html">Privacy Policy</a>
+ </p>
 </body></html>
