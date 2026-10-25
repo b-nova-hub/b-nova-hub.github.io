@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "name": "Fun Game",
+    "category": "game",
+    "description": "Enjoy this fun game.",
+    "image": "projects/game-fun/screenshot.png",
+    "features": [],
+    "openUrl": "",
+    "downloadUrl": ""
+  }
+]
