@@ -56,13 +56,22 @@
 <script>
 const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navlinks');menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰'});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));document.getElementById('year').textContent=new Date().getFullYear();
 // Add official social URLs here when accounts are ready. Empty URLs stay hidden, so no duplicate or "coming soon" buttons appear.
+
 const BNOVA_LINKS = [
-  { label: 'YouTube', url: '' },
-  { label: 'TikTok', url: '' },
-  { label: 'Instagram', url: '' },
-  { label: 'Learning group', url: '' },
-  { label: 'Other', url: '' }
+  {
+    label: 'YouTube',
+    url: 'https://www.youtube.com/@B.NOVAStudio'
+  },
+  {
+    label: 'Facebook Page',
+    url: 'https://www.facebook.com/share/18X8tgrXsS/'
+  },
+  {
+    label: 'TikTok',
+    url: 'https://www.tiktok.com/@bnovahub'
+  }
 ];
+
 const otherLinksEl = document.getElementById('otherLinks');
 if (otherLinksEl) {
   const validLinks = BNOVA_LINKS.filter(item => /^https?:\/\//i.test(item.url));
