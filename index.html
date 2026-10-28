@@ -92,8 +92,9 @@ const projectGrid=document.getElementById('projectGrid');let allProjects=[];cons
 function drawProjects(category='all'){const list=allProjects.filter(p=>category==='all'||String(p.category||'').toLowerCase()===category);if(!list.length){projectGrid.innerHTML='<div class="project-note project-empty"><strong>No projects in this category yet.</strong><br>New B.NOVA releases will appear here when their project folders are added to GitHub and deployed.</div>';return;}projectGrid.innerHTML=list.map(p=>{const cat=String(p.category||'app').toLowerCase();const image=p.image?esc(p.image):'';const features=Array.isArray(p.features)?p.features.slice(0,6):[];const open=p.openUrl?`<a class="btn gold" href="${esc(p.openUrl)}" target="_blank" rel="noopener">Open project ↗</a>`:'';const download=p.downloadUrl?`<a class="btn dark" href="${esc(p.downloadUrl)}" target="_blank" rel="noopener">Download ↓</a>`:'';return `<article class="project-card"><img class="project-thumb" src="${image}" alt="${esc(p.name)} preview" loading="lazy" onerror="this.style.display='none'"><div class="project-body"><div class="project-category">${esc(cat)}</div><h3>${esc(p.name)}</h3><p>${esc(p.description)}</p>${features.length?`<div class="project-features">${features.map(f=>`<span>${esc(f)}</span>`).join('')}</div>`:''}<div class="project-actions">${open}${download}</div></div></article>`}).join('');}
 document.getElementById('projectFilters').addEventListener('click',e=>{const b=e.target.closest('button[data-category]');if(!b)return;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));drawProjects(b.dataset.category)});
 fetch('./projects.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw new Error('projects.json not found');return r.json()}).then(data=>{allProjects=Array.isArray(data)?data:[];drawProjects()}).catch(()=>{projectGrid.innerHTML='<div class="project-note project-empty"><strong>Project library is ready for your first release.</strong><br>Add a project folder using the included template. GitHub Actions will build the project list automatically whenever you commit a new project.</div>';});
+
 </script>
- <p style="text-align:center; padding:15px;">
-  <a href="privacy-policy.html">Privacy Policy</a>
- </p>
+<p style="text-align:center; padding:10px; margin:0; font-size:14px; line-height:1.5;">
+  <a href="privacy-policy.html" style="font-size:14px;">Privacy Policy</a>
+</p>
 </body></html>
