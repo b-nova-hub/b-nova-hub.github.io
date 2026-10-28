@@ -38,32 +38,43 @@
 .other-link{display:inline-flex;align-items:center;gap:8px;padding:10px 13px;border:1px solid rgba(224,184,80,.3);border-radius:10px;color:#e8d7a5;font-size:11px;text-decoration:none;white-space:nowrap}
 .other-link:hover{background:#211b0e;border-color:#d9b24e}
 @media(max-width:700px){.contact-band{padding:25px;min-height:0}.contact-mark{display:none}.contact-cta{width:auto;max-width:100%;font-size:11px;padding:15px 18px}.other-links-wrap{align-items:flex-start;flex-direction:column;padding:22px}.other-links{justify-content:flex-start}.art-caption{font-size:8px;letter-spacing:.07em;flex-wrap:wrap}}
-  /* --- Mobile & Responsive Fixes --- */
-  @media (max-width: 768px) {
-    .cards-container, .services-grid {
+    /* --- 100% Guaranteed Mobile Fix --- */
+  @media screen and (max-width: 768px) {
+    /* Saare grids ko mobile par ek ke niche ek laane ke liye */
+    div, section, .wrap, .cards-container, .services-grid {
       grid-template-columns: 1fr !important;
-      gap: 16px !important;
-      padding: 20px 12px !important;
+      display: block !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
     }
-    .card, .service-card {
+
+    /* Har card ka size aur spacing fix karne ke liye */
+    div[class*="card"], article, .service-card {
+      width: 100% !important;
+      margin: 0 0 16px 0 !important;
       padding: 20px 16px !important;
       height: auto !important;
     }
-    .card h3, .service-card h2 {
+
+    /* Headings ka size chhota karne ke liye */
+    h2, h3 {
       font-size: 20px !important;
-      margin-bottom: 10px !important;
+      line-height: 1.3 !important;
     }
-    .card p, .service-card p {
+
+    /* Paragraphs ka size aur content bilkul waisa hi rakhne ke liye */
+    p {
       font-size: 14px !important;
       line-height: 1.5 !important;
-      margin-bottom: 15px !important;
     }
+
+    /* Privacy policy aur footer ko theek karne ke liye */
     footer {
       text-align: center !important;
       padding: 30px 15px !important;
     }
- }
- 
+  }
+
 </style>
 <style id="contact-button-fix">.contact-band .socials .social{white-space:nowrap;display:inline-flex;align-items:center;gap:.55rem}.contact-band .socials{display:flex;flex-wrap:wrap;gap:10px}.contact-band .socials .social:first-child{min-width:max-content}</style>
 </head>
