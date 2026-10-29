@@ -47,23 +47,46 @@
   }
 
   /* Agar kisi jagah text select karne dena ho toh wahan normal rakh sakte hain, baaki puri site par band ho jayega */
-@media screen and (max-width: 768px) {
-  .card, .service-card, [class*="card"] {
-    padding: 14px !important;
-    margin-bottom: 12px !important;
+</style>
+<style id="contact-button-fix">.contact-band .socials .social{white-space:nowrap;display:inline-flex;align-items:center;gap:.55rem}.contact-band .socials{display:flex;flex-wrap:wrap;gap:10px}.contact-band .socials .social:first-child{min-width:max-content}</style>
+
+<style id="bnova-size-fix">
+.card h3,
+.service h3,
+.project-body h3 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.card p,
+.service p,
+.project-body p {
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.card,
+.service {
+  min-width: 0;
+}
+
+.project-body {
+  padding: 15px;
+  gap: 8px;
+}
+
+@media (max-width: 620px) {
+  .card,
+  .service {
+    padding: 14px;
   }
-  .card h3, .service-card h2, [class*="card"] h2, [class*="card"] h3 {
-    font-size: 1.1rem !important;
-    line-height: 1.3 !important;
-    margin-bottom: 6px !important;
-  }
-  .card p, .service-card p, [class*="card"] p {
-    font-size: 0.85rem !important;
-    line-height: 1.4 !important;
+
+  .project-body {
+    padding: 12px;
   }
 }
 </style>
-<style id="contact-button-fix">.contact-band .socials .social{white-space:nowrap;display:inline-flex;align-items:center;gap:.55rem}.contact-band .socials{display:flex;flex-wrap:wrap;gap:10px}.contact-band .socials .social:first-child{min-width:max-content}</style>
+
 </head>
 <body><div class="topline"></div>
 <header><div class="wrap nav"><a class="brand" href="#home" aria-label="B.NOVA home"><strong>B<span>.</span>NOVA</strong><small>IDEAS WITHOUT LIMITS</small></a><nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#games">Games</a><a href="#tools">Tools</a><a href="#software">Software & Apps</a><a href="#learn">Learn</a><a href="#about">About</a><a href="#contact">Contact</a></nav><a class="btn gold" href="#build">Build with us ↗</a><button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button></div></header>
