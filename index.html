@@ -85,8 +85,12 @@
     padding: 12px;
   }
 }
+ .card, .service {
+  min-width: 0;
+  flex: 1 1 280px; /* Is se cards choti screen par stretch ho kar lambay nahi honge */
+ }
+ 
 </style>
-
 </head>
 <body><div class="topline"></div>
 <header><div class="wrap nav"><a class="brand" href="#home" aria-label="B.NOVA home"><strong>B<span>.</span>NOVA</strong><small>IDEAS WITHOUT LIMITS</small></a><nav class="navlinks" id="navlinks"><a href="#home">Home</a><a href="#games">Games</a><a href="#tools">Tools</a><a href="#software">Software & Apps</a><a href="#learn">Learn</a><a href="#about">About</a><a href="#contact">Contact</a></nav><a class="btn gold" href="#build">Build with us ↗</a><button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button></div></header>
