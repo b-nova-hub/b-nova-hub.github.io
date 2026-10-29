@@ -47,45 +47,21 @@
   }
 
   /* Agar kisi jagah text select karne dena ho toh wahan normal rakh sakte hain, baaki puri site par band ho jayega */
-
-  /* --- 2. Mobile Cards aur Privacy Policy Fix --- */
-  @media screen and (max-width: 768px) {
-    /* Cards ko 1 column mein set karne ke liye */
-    .cards-container, .services-grid, .service-grid {
-      display: flex !important;
-      flex-direction: column !important;
-      gap: 16px !important;
-      padding: 10px !important;
-    }
-
-    .card, .service-card, [class*="card"] {
-      width: 100% !important;
-      max-width: 100% !important;
-      height: auto !important;
-      padding: 20px 16px !important;
-      margin-bottom: 12px !important;
-      box-sizing: border-box !important;
-    }
-
-    .card h3, .service-card h2, [class*="card"] h2, [class*="card"] h3 {
-      font-size: 20px !important;
-      margin-bottom: 10px !important;
-    }
-
-    .card p, .service-card p, [class*="card"] p {
-      font-size: 14px !important;
-      line-height: 1.5 !important;
-    }
-
-    /* --- Privacy Policy Text Ka Size Aur Alignment Fix --- */
-    footer p, .privacy-policy, footer a[href*="privacy"], p[style*="font-size: 14px"] {
-      font-size: 12px !important;
-      text-align: center !important;
-      display: block !important;
-      margin-top: 15px !important;
-      color: #888888 !important;
-    }
- }
+@media screen and (max-width: 768px) {
+  .card, .service-card, [class*="card"] {
+    padding: 14px !important;
+    margin-bottom: 12px !important;
+  }
+  .card h3, .service-card h2, [class*="card"] h2, [class*="card"] h3 {
+    font-size: 1.1rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 6px !important;
+  }
+  .card p, .service-card p, [class*="card"] p {
+    font-size: 0.85rem !important;
+    line-height: 1.4 !important;
+  }
+}
 </style>
 <style id="contact-button-fix">.contact-band .socials .social{white-space:nowrap;display:inline-flex;align-items:center;gap:.55rem}.contact-band .socials{display:flex;flex-wrap:wrap;gap:10px}.contact-band .socials .social:first-child{min-width:max-content}</style>
 </head>
