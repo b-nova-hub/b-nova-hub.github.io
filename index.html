@@ -111,34 +111,34 @@ const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('na
 const BNOVA_LINKS = [
   {
     label: 'YouTube',
-    url: 'https://www.youtube.com/@B.NOVAStudio'
+    url: 'https://www.youtube.com/@B.NOVAStudio',
+    icon: '▶'
   },
   {
     label: 'Facebook Page',
-    url: 'https://www.facebook.com/share/18X8tgrXsS/'
+    url: 'https://www.facebook.com/share/18X8tgrXsS/',
+    icon: 'f'
   },
   {
     label: 'TikTok',
-    url: 'https://www.tiktok.com/@bnovahub'
+    url: 'https://www.tiktok.com/@bnovahub',
+    icon: '♪'
   }
 ];
 
 const otherLinksEl = document.getElementById('otherLinks');
-
 if (otherLinksEl) {
   otherLinksEl.replaceChildren();
-
   BNOVA_LINKS.forEach(item => {
     const link = document.createElement('a');
     link.className = 'other-link';
     link.href = item.url;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
-    link.textContent = item.label + ' ↗';
+    link.textContent = item.icon + ' ' + item.label + ' ↗';
     otherLinksEl.appendChild(link);
   });
  }
- 
 const projectGrid=document.getElementById('projectGrid');let allProjects=[];const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function drawProjects(category='all'){const list=allProjects.filter(p=>category==='all'||String(p.category||'').toLowerCase()===category);if(!list.length){projectGrid.innerHTML='<div class="project-note project-empty"><strong>No projects in this category yet.</strong><br>New B.NOVA releases will appear here as soon as they are published.
  .</div>';return;}projectGrid.innerHTML=list.map(p=>{const cat=String(p.category||'app').toLowerCase();const image=p.image?esc(p.image):'';const features=Array.isArray(p.features)?p.features.slice(0,6):[];const open=p.openUrl?`<a class="btn gold" href="${esc(p.openUrl)}" target="_blank" rel="noopener">Open project ↗</a>`:'';const download=p.downloadUrl?`<a class="btn dark" href="${esc(p.downloadUrl)}" target="_blank" rel="noopener">Download ↓</a>`:'';return `<article class="project-card"><img class="project-thumb" src="${image}" alt="${esc(p.name)} preview" loading="lazy" onerror="this.style.display='none'"><div class="project-body"><div class="project-category">${esc(cat)}</div><h3>${esc(p.name)}</h3><p>${esc(p.description)}</p>${features.length?`<div class="project-features">${features.map(f=>`<span>${esc(f)}</span>`).join('')}</div>`:''}<div class="project-actions">${open}${download}</div></div></article>`}).join('');}
