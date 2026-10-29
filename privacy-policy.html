@@ -1,71 +1,367 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Privacy Policy | B.NOVA</title>
-  <meta name="description" content="B.NOVA Privacy Policy explaining cookies, advertising and information use.">
+  <meta name="description" content="Read the B.NOVA Privacy Policy covering cookies, advertising, data usage and privacy.">
+  <meta name="theme-color" content="#070707">
+
   <style>
-<style>
-  body {
-    background-color: #070707 !important;
-    color: #eaeaea !important;
-    font-family: Arial, sans-serif;
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 30px 24px;
-    line-height: 1.6;
-    -webkit-user-select: none !important;
-    user-select: none !important;
-  }
-  h1, h2, h3 {
-    color: #F4F14F !important;
-  }
-  p, strong, li, span {
-    color: #eaeaea !important;
-  }
-  a {
-    color: #FFD700 !important;
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
-</style>
+    :root {
+      --bg: #070707;
+      --panel: #101010;
+      --panel2: #141313;
+      --gold: #f4c64f;
+      --gold2: #ffd700;
+      --text: #eaeaea;
+      --muted: #a5a5a5;
+      --border: #292929;
+    }
 
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    a {
+      color: var(--gold2);
+      text-decoration: none;
+      transition: color .2s ease;
+    }
+
+    a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    .topline {
+      height: 3px;
+      background: linear-gradient(
+        90deg, transparent, var(--gold), transparent
+      );
+    }
+
+    .wrap {
+      width: min(1120px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: rgba(7, 7, 7, .97);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: inline-flex;
+      flex-direction: column;
+      color: #fff;
+      line-height: 1.1;
+      flex-shrink: 0;
+      text-decoration: none;
+    }
+
+    .brand strong {
+      font-size: 27px;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    .brand strong span {
+      color: var(--gold);
+    }
+
+    .brand small {
+      margin-top: 6px;
+      font-size: 9px;
+      letter-spacing: 2px;
+      color: var(--gold);
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+    }
+
+    .navlinks a {
+      color: #d5d5d5;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .navlinks a:hover,
+    .navlinks a.active {
+      color: var(--gold);
+    }
+
+    .navlinks .action {
+      padding: 10px 14px;
+      border-radius: 6px;
+      background: var(--gold);
+      color: #111;
+      font-weight: 700;
+    }
+
+    .navlinks .action:hover {
+      background: var(--gold2);
+      color: #111;
+      text-decoration: none;
+    }
+
+    main {
+      min-height: 65vh;
+      padding: 48px 0 64px;
+    }
+
+    .policy {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 34px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      color: #fff;
+      font-size: clamp(30px, 5vw, 42px);
+      line-height: 1.2;
+      letter-spacing: -.7px;
+    }
+
+    .updated {
+      padding-bottom: 22px;
+      margin: 0 0 26px;
+      color: var(--muted);
+      font-size: 13px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .updated strong {
+      color: var(--text);
+    }
+
+    .intro {
+      color: #d8d8d8;
+      font-size: 16px;
+    }
+
+    h2 {
+      margin: 32px 0 10px;
+      padding-left: 12px;
+      border-left: 3px solid var(--gold);
+      color: var(--gold);
+      font-size: 19px;
+      line-height: 1.4;
+    }
+
+    p {
+      margin: 12px 0;
+      color: var(--text);
+    }
+
+    .return-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 22px;
+      padding: 11px 16px;
+      border: 1px solid var(--gold);
+      border-radius: 6px;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    .return-link:hover {
+      background: var(--gold);
+      color: #111;
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 24px 0;
+      border-top: 1px solid var(--border);
+      background: #090909;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 5px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    footer .footer-brand {
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        align-items: flex-start;
+        gap: 18px;
+      }
+
+      .navlinks {
+        justify-content: flex-start;
+        gap: 12px 16px;
+      }
+
+      .navlinks a {
+        font-size: 12px;
+      }
+
+      .navlinks .action {
+        padding: 8px 10px;
+      }
+
+      main {
+        padding: 26px 0 38px;
+      }
+
+      .policy {
+        padding: 23px 18px;
+        border-radius: 10px;
+      }
+
+      h2 {
+        font-size: 18px;
+        margin-top: 27px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      .wrap {
+        width: calc(100% - 24px);
+      }
+
+      .brand strong {
+        font-size: 24px;
+      }
+
+      .policy {
+        padding: 20px 14px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Privacy Policy</h1>
-  <p><strong>Last updated:</strong> October 25, 2026</p>
+  <div class="topline"></div>
 
-  <p>Welcome to B.NOVA. This Privacy Policy explains how information may be collected and used when you visit our website.</p>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="./#home" aria-label="B.NOVA home">
+        <strong>B<span>.</span>NOVA</strong>
+        <small>IDEAS WITHOUT LIMITS</small>
+      </a>
 
-  <h2>Information and Usage Data</h2>
-  <p>Our website may automatically receive technical information, such as browser type, device information, IP address, and pages visited, through hosting services, security tools, or analytics services where enabled.</p>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="./#home">Home</a>
+        <a href="./#games">Games</a>
+        <a href="./#tools">Tools</a>
+        <a href="./#software">Software &amp; Apps</a>
+        <a href="./#learn">Learn</a>
+        <a href="./#about">About</a>
+        <a href="./#contact">Contact</a>
+        <a class="action" href="./#contact">Build with us ↗</a>
+      </nav>
+    </div>
+  </header>
 
-  <h2>Cookies</h2>
-  <p>Cookies are small files stored on your device. B.NOVA or third-party services may use cookies or similar technologies to operate the website, understand usage, and support advertising.</p>
+  <main class="wrap">
+    <article class="policy">
+      <p class="eyebrow">B.NOVA · Website Information</p>
 
-  <h2>Google AdSense and Advertising</h2>
-  <p>Third-party vendors, including Google, may use cookies or similar technologies to serve ads based on visits to this website or other websites. Google's use of advertising cookies enables Google and its partners to serve ads as permitted by applicable settings and consent requirements.</p>
-  <p>Learn more about how Google uses information from sites or apps that use its services at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google's partner sites policy</a>.</p>
-  <p>You can manage Google's ad personalization settings at <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</p>
+      <h1>Privacy Policy</h1>
 
-  <h2>Third-Party Services</h2>
-  <p>Links to third-party websites, apps, or downloads may be provided. Those services have their own privacy policies and practices. Please review them before sharing information.</p>
+      <p class="updated">
+        <strong>Last updated:</strong> October 25, 2026
+      </p>
 
-  <h2>Data Security</h2>
-  <p>We take reasonable steps to maintain our website, but no method of transmitting or storing information online can be guaranteed to be completely secure.</p>
+      <p class="intro">
+        Welcome to B.NOVA. This Privacy Policy explains how information
+        may be collected and used when you visit our website.
+      </p>
 
-  <h2>Children's Privacy</h2>
-  <p>B.NOVA does not knowingly seek to collect personal information from children through this website. If you believe a child has provided personal information, please contact us so we can review the matter.</p>
+      <h2>Information and Usage Data</h2>
+      <p>Our website may automatically receive technical information, such as browser type, device information, IP address, and pages visited, through hosting services, security tools, or analytics services where enabled.</p>
 
-  <h2>Changes to This Policy</h2>
-  <p>We may update this Privacy Policy when our website or applicable requirements change. Updates will be posted on this page.</p>
+      <h2>Cookies</h2>
+      <p>Cookies are small files stored on your device. B.NOVA or third-party services may use cookies or similar technologies to operate the website, understand usage, and support advertising.</p>
 
-  <h2>Contact Us</h2>
-  <p>For privacy-related questions, please use the contact options provided on the B.NOVA website.</p>
+      <h2>Google AdSense and Advertising</h2>
+      <p>Third-party vendors, including Google, may use cookies or similar technologies to serve ads based on visits to this website or other websites. Google's use of advertising cookies enables Google and its partners to serve ads as permitted by applicable settings and consent requirements.</p>
 
-  <p><a href="./">Return to B.NOVA Home</a></p>
+      <p>Learn more about how Google uses information from sites or apps that use its services at <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google's partner sites policy</a>.</p>
+
+      <p>You can manage Google's ad personalization settings at <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ads Settings</a>.</p>
+
+      <h2>Third-Party Services</h2>
+      <p>Links to third-party websites, apps, or downloads may be provided. Those services have their own privacy policies and practices. Please review them before sharing information.</p>
+
+      <h2>Data Security</h2>
+      <p>We take reasonable steps to maintain our website, but no method of transmitting or storing information online can be guaranteed to be completely secure.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>B.NOVA does not knowingly seek to collect personal information from children through this website. If you believe a child has provided personal information, please contact us so we can review the matter.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy when our website or applicable requirements change. Updates will be posted on this page.</p>
+
+      <h2>Contact Us</h2>
+      <p>For privacy-related questions, please use the contact options provided on the B.NOVA website.</p>
+
+      <a class="return-link" href="./">← Return to B.NOVA Home</a>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p class="footer-brand">B.NOVA — IDEAS WITHOUT LIMITS</p>
+      <p>Privacy, transparency and creative technology.</p>
+      <p>© B.NOVA. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
